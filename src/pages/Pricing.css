@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700&family=Alegreya:wght@400;500;600;700&family=Poppins&family=Work+Sans:wght@400;500;600;700&display=swap');
+
+
+
+.pricing-main{
+    margin-top: 0px;
+    margin-left:0px;
+    margin-right: 0px;
+    overflow: hidden;
+}
+
+.pricing-main h1{
+    font-family: 'Alegreya Sans SC', sans-serif;
+    letter-spacing: 3px;
+    color: white;
+    font-size: 40px;
+    margin-top: 140px;
+}
+.pricing-main h3{
+    font-family: 'Poppins';
+    letter-spacing: 3px;
+    color: white;
+    font-size: 16px;
+    margin-top: -30px;
+}
+
+.boxes{
+    display: flex;
+    position:relative;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-bottom: 200px;
+    margin-left: -40px;
+    align-self: center;
+    justify-content: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    height:auto;
+    width: 100%;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+.boxes h2{
+    font-size: 24px;
+    color: white;
+}
+
+.boxes .price-container{
+    align-items: center;
+    border: 3px solid rgb(255, 47, 47);
+    background-color: rgb(255, 47, 47);
+    color: white;
+    height: auto;
+    width:-moz-fit-content;
+    width: fit-content;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    padding: 0px 30px 0px 30px;
+    border-radius: 100px;
+}
+
+.boxes .price{
+    font-size: 30px;
+    color: white;
+}
+
+.box1,.box2,.box3{
+    background-image:linear-gradient(0deg, rgb(26, 26, 26),rgb(11, 11, 11));
+     border-radius: 16px;
+     text-align: center;
+     min-width: 400px;
+     max-width: 400px;
+    width: 30%;
+    height: 450px;
+    cursor: pointer;
+
+}
+
+@media screen and (width<1000px) {
+    .box1,.box2,.box3{
+        width: 60%;
+    }
+    .boxes{
+        padding-left: 3.5%;
+        align-items: center;
+    }
+}
+
+.box-heading{
+    font-family: 'Poppins';
+    letter-spacing: 4px;
+}
+
+.box-contents{
+    padding-block: 20px;
+    margin: 0;
+    margin-left: -10%;
+}
+
+.box-contents li{
+    font-family: 'Poppins';
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding-block: 10px;
+    list-style: none;
+}
+.not-available{
+    text-decoration:line-through red 4px;
+}
+
+.best-value{ font-size: 18px;
+    background-color: red;
+    padding-block: 2px;
+    padding-inline: 10px;
+    margin-top: -13px;
+    margin-right: 0;
+    margin-bottom: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    font-weight: 600;
+    border: 2px red solid;
+    border-radius: 0px 0px 16px 16px; 
+}
+
+
+
+
+
+

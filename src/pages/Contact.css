@@ -1,0 +1,185 @@
+/* .body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    
+}
+
+.contact-main{
+    margin-top: 92px;
+    margin-bottom: 0px;
+    width: 90vw;
+    margin-left: -3vw;
+    
+}
+
+.contact-textblock{
+    margin-top: 100px;  
+    width: 100%;
+    align-items: center;
+}
+
+.contacts{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap:10%;
+     width:;
+    height:450px;
+    bottom: 20%;
+}
+
+.contact1,.contact2,.contact3  {
+    width: 30%;
+    color: white;
+    background-image:linear-gradient(0deg, rgb(26, 26, 26),rgb(11, 11, 11));
+    height: auto;
+    border-radius: 16px;
+}
+.contact1:hover,.contact2:hover,.contact3:hover  {
+    border: 3px solid rgb(255, 47, 47);  
+}
+
+.icons{
+    text-align: center;
+    margin-left:57.5%;
+    margin-top:20%;
+    transform: translate(-50%);
+    scale:2;
+    padding: 0px;
+    background-color: rgb(255, 47, 47);
+    border-radius: 32px;
+    width:15%;
+    padding-top: 7px;
+    padding-bottom: 5px;
+    color:rgb(255, 255, 255);
+}
+
+.icon-text{
+    font-size: 20px;
+    margin-top:15%;
+    text-align: center;
+    color:rgb(255, 176, 176);
+
+}
+
+@media screen and (max-width: 1200px){
+    .icons{
+        scale:2.0;
+    }
+    .contacts{
+        height: 300px;
+    }
+}
+
+
+
+
+
+ */
+ @import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700&family=Alegreya:wght@400;500;600;700&family=Poppins&family=Work+Sans:wght@400;500;600;700&display=swap');
+
+ .contact-main{
+     margin-top: 140px;
+     margin-left:0px;
+     margin-right: 0px;
+ }
+ 
+ .contact-main h1{
+     font-family: 'Alegreya Sans SC', sans-serif;
+     letter-spacing: 3px;
+     color: white;
+     font-size: 40px;
+     margin-top: 140px;
+ }
+ 
+ .contacts{
+    display: flex;
+    position:relative;
+    flex-direction: row;
+    margin-top: 50px;
+    margin-bottom: 200px;
+    margin-left: -40px;
+    align-self: center;
+    justify-content: center;
+    padding-left: 40px;
+    padding-right: 40px;
+    height:auto;
+    width: 100%;
+    gap: 40px;
+    flex-wrap: wrap;
+ }
+ .contacts h2{
+     font-size: 24px;
+     color: white;
+ }
+ 
+ .contacts .price-container{
+     align-items: center;
+     border: 3px solid rgb(255, 47, 47);
+     background-color: rgb(255, 47, 47);
+     color: white;
+     height: auto;
+     width:-moz-fit-content;
+     width: fit-content;
+     margin-left: 50%;
+     transform: translateX(-50%);
+     padding: 0px 30px 0px 30px;
+     border-radius: 100px;
+ }
+ 
+ .contacts .icons{
+    text-align: center;
+    margin-left:57.5%;
+    margin-top:20%;
+    transform: translate(-50%);
+    scale:2;
+    padding: 0px;
+    background-color: rgb(255, 47, 47);
+    border-radius: 32px;
+    width:15%;
+    padding-top: 12px;
+    padding-bottom: 10px;
+    color:rgb(255, 255, 255);
+ }
+
+ .icon-text{
+    font-size: 20px;
+    margin-top:40px;
+    font-family: 'Poppins';
+    text-align: center;
+    color:rgb(255, 176, 176);
+ }
+ 
+ .contact1,.contact2,.contact3{
+     background-image:linear-gradient(0deg, rgb(26, 26, 26),rgb(11, 11, 11));
+     border-radius: 16px;
+     text-align: center;
+     min-width: 400px;
+     max-width: 400px;
+    width: 30%;
+    height: 450px;
+ }
+ 
+ .box-heading{
+     font-family: 'Poppins';
+     letter-spacing: 4px;
+ }
+ 
+.box-contents{
+    padding-block: 10px;
+    margin: 0;
+    margin-left: -10%;
+}
+
+.box-contents li{
+    font-family: 'Poppins';
+    font-size: 18px;
+    letter-spacing: 1px;
+    padding-block: 10px;
+    list-style: none;
+}
+ 
+ 
+ 
+ 

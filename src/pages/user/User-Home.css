@@ -1,0 +1,26 @@
+.user-homepage{
+    margin-top:-350px;
+}
+.log-out{
+    border:2px solid white;
+    padding:10px 30px;
+    color: white;
+    border-radius: 10px;    
+    height:auto;
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.log-out:hover{
+    border: 2px solid transparent;
+    color: rgb(0, 255, 242);
+}
+
+
+.header-user{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    width:90vw;
+}
