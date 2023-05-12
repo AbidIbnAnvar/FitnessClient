@@ -1,0 +1,59 @@
+.user-details-form{
+    display: flex;
+    flex-direction: column;
+}
+.user-details-form input[type=text]{
+    width: 70%;
+    align-self: center;
+    padding: 15px;
+    margin: 1px 0 10px 0;
+    border: none;
+    background: black;
+    border-radius: 10px;
+}
+
+.user-details-form label{
+    margin: 10px 10px 1px 10px;
+    font-size: 20px;
+    font-family: 'Work Sans';
+}
+.user-details-form h2{
+    margin: 1px 0px 10px 0px;
+    font-family: 'Poppins';
+    font-weight: 100;
+}
+
+.left-arrow{
+    float: left;
+    margin-left: -130px;
+    margin-top:10px
+}
+
+.fa-arrow-left{
+    color: white;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 32px;
+    -webkit-transform:scale(2.0);
+    transform:scale(2.0);
+}
+
+.edit-button{
+    background-color: green;
+    opacity: 0.8;
+    margin-top: 20px;
+}
+.edit-button:hover{
+    opacity: 1;
+}
+
+.cancel-button{
+    background-color: red;
+    opacity: 0.8;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.cancel-button:hover{
+    opacity: 1;
+}

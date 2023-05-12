@@ -32,14 +32,16 @@ function Signup() {
   async function submit(e){
     e.preventDefault();
 
-    const response= await fetch("http://localhost:8080/signup",{
-        method:'POST',
-        body: JSON.stringify({username,email,password}),
-        headers: {'Content-type':'application/json'}
-      })
+    const response = await axios.post("http://localhost:8080/signup",{username,email, password})
+
+    // const response= await fetch("http://localhost:8080/signup",{
+    //     method:'POST',
+    //     body: JSON.stringify({username,email,password}),
+    //     headers: {'Content-type':'application/json'}
+    //   })
     if (response.status === 200){
-      alert('registeration succesful')
-      history("/user/home",{state:{id:username}})
+      alert('Registeration Successfull')
+      history("/login")
     }else{
       alert('registration failed')
     }

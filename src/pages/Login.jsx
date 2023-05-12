@@ -44,7 +44,7 @@ function Login() {
     // }
 
      if (response.status === 200){
-      alert('registeration succesful')
+      alert('Registeration Successfull')
       setRedirect(true)
       // response.json().then(userInfo =>{
       //   setUserInfo(userInfo)
