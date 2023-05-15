@@ -32,14 +32,16 @@ function Signup() {
   async function submit(e){
     e.preventDefault();
 
-    const response= await fetch("http://localhost:8080/signup",{
-        method:'POST',
-        body: JSON.stringify({username,email,password}),
-        headers: {'Content-type':'application/json'}
-      })
+    const response = await axios.post("http://localhost:8080/signup",{username,email, password})
+
+    // const response= await fetch("http://localhost:8080/signup",{
+    //     method:'POST',
+    //     body: JSON.stringify({username,email,password}),
+    //     headers: {'Content-type':'application/json'}
+    //   })
     if (response.status === 200){
-      alert('registeration succesful')
-      history("/user/home",{state:{id:username}})
+      alert('Registeration Successfull')
+      history("/login")
     }else{
       alert('registration failed')
     }
@@ -72,13 +74,13 @@ function Signup() {
             <form class="form-container" action='POST' onSubmit={submit}>
               <h1>Sign Up</h1>
 
-              <label for="username"><b>Name</b></label>
-              <input type="username" placeholder="Enter Full Name" name="username" value={username} onChange={e => setUsername(e.target.value)} required />
+              <label htmlFor="username"><b>Username</b></label>
+              <input type="username" placeholder="Enter Username" name="username" value={username} onChange={e => setUsername(e.target.value)} required />
           
-              <label for="email"><b>Email</b></label>
+              <label htmlFor="email"><b>Email</b></label>
               <input type="email" placeholder="Enter Email" name="email"  value={email} onChange={(e)=>{setEmail(e.target.value)}} required />
           
-              <label for="psw"><b>Password</b></label>
+              <label htmlFor="psw"><b>Password</b></label>
               <input type="password" placeholder="Enter Password" name="psw"  value={password} onChange={e => setPassword(e.target.value)} required />
           
               <button type="submit" class="btn">Sign Up</button>

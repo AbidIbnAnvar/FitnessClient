@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700&family=Alegreya:wght@400;500;600;700&family=Poppins&family=Work+Sans:wght@400;500;600;700&display=swap');
+
+#root{
+    --blue : rgb(0, 255, 242);
+}
+
+.user-right{
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.log-out{
+    border:2px solid white;
+    padding:10px 30px;
+    color: white;
+    border-radius: 10px;    
+    height:auto;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: 20px;
+    -webkit-transform:scale(1.0);
+    transform:scale(2.0) ;
+}
+
+.log-out:hover{
+    border: 2px solid transparent;
+    color: rgb(255, 50, 50);
+}
+
+.user-profile{
+     margin-right: 60px;
+     text-decoration: none;
+}
+
+
+
+.header-user{
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    width:90vw;
+}
+.header-user h1{
+    display: flex;
+    flex-direction: row;
+    font-family: 'Poppins';
+}
+
+.fa-user{
+    margin-left: auto;
+    -webkit-transform:scale(2.0);
+    transform:scale(2.0);
+    color: white;
+    border: 1px solid white;
+    border-radius: 32px;
+    padding: 10px;
+}
+
+.fa-user:hover{
+    color: var(--blue);
+    border: 1px solid transparent;
+
+}
+
+
+.header-username{
+   margin-left: 20px;
+   font-family: 'Poppins';
+   text-align: center;
+   color: rgb(255, 50, 50);
+   
+}

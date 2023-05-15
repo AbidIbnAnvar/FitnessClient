@@ -39,7 +39,7 @@ function Pricing() {
                         <li className="not-available">Point 3</li>
                       </ul>
                     </div>
-                    <div className="best-value">Best Value</div>
+                    <div className="best-value">BEST VALUE</div>
                 </div>
 
                 <div className="box3">

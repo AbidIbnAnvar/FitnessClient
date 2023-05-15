@@ -24,8 +24,10 @@
 
 // export default App;
 
-import { useState, useEffect, useMemo } from 'react'
+import { useState, useEffect} from 'react'
 import './App.css'
+import Cookies from 'universal-cookie'
+import jwt from "jwt-decode"
 import { Routes,Route } from 'react-router-dom'
 import Home from './pages/Homepage.jsx'
 import Service from './pages/Service'
@@ -35,7 +37,9 @@ import Contact from './pages/Contact'
 import Login from './pages/Login'
 import Signup from './pages/Signup'
 import UserHome from './pages/user/User-Home'
-import Navbar from './components/Navbar'
+import UserProfile from './pages/user/User-Profile'
+import UserFitness from './pages/user/User-Fitness'
+import UserForum from './pages/user/User-Forum'
 
 function App() {
   const [showButton, setShowButton] = useState(false);
@@ -71,6 +75,9 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/signup' element={<Signup />} />
         <Route path='/user/home' element={<UserHome />} />
+        <Route path='/user/profile' element={<UserProfile />} />
+        <Route path='/user/fitness-videos' element={<UserFitness />} />
+        <Route path='/user/forum' element={<UserForum/>} />
       </Routes>
       
       {showButton && (

@@ -44,16 +44,15 @@ function Login() {
     // }
 
      if (response.status === 200){
-      alert('registeration succesful')
+      alert('Login Successfull')
       setRedirect(true)
       // response.json().then(userInfo =>{
       //   setUserInfo(userInfo)
       //   setRediret(true)
       // })
      }else{
-       alert('registration failed')
+       alert('login failed')
      }
-    console.log('Hello',redirect)
      
       
     
@@ -93,10 +92,10 @@ function Login() {
                 </span> </button>  */}
               <h1>Login</h1>
           
-              <label for="username"><b>Username</b></label>
+              <label htmlFor="username"><b>Username</b></label>
               <input type="username" onChange={(e)=>{setUsername(e.target.value)}} placeholder="Enter Username" name="username" required />
           
-              <label for="psw"><b>Password</b></label>
+              <label htmlFor="psw"><b>Password</b></label>
               <input type="password" onChange={(e)=>{setPassword(e.target.value)}} placeholder="Enter Password" name="psw" required />
           
               <button type="submit" className="btn">Login</button>

@@ -1,0 +1,93 @@
+
+.user-forum{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    right:0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.create-button{
+    margin-top:75px;
+    padding:15px 30px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.create-button i{
+    margin-right: 10px;
+}
+
+#post-message{
+    height: 24px;
+    resize: none;
+}
+
+.create-post{
+    margin-top: 80px;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 30px;
+}
+.create-post label{
+    font-family: 'Poppins';
+    font-size: 22px;
+}
+
+.create-post textarea{
+    background-color: rgb(21, 21, 21);
+    border-radius: 20px;
+    padding: 20px;
+    font-family: 'Poppins';
+    font-size: 16px;
+}
+
+.post-button{
+    margin-right: 20px;
+    width: 175px;
+    background-color: darkgreen;
+    font-family: 'Poppins';
+    
+}
+.cancel-post-button{
+    margin-left: 20px;
+    width: 175px;
+    background-color: red;
+    font-family: 'Poppins';
+}
+
+.forum-main .forum-data p {
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    font-family: 'Poppins';
+    font-size: 20px;
+    padding: 20px 40px;
+    background-color: rgb(19, 19, 19);
+    border-radius: 10px;
+    width: 70%;
+}
+.forum-main .forum-data p div{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.post-no{
+    border-right: 3px solid red;
+    padding-inline:20px;
+    border-radius: 20px;
+    height: 30px;
+}
+
+.post-username{
+    font-size: 15px;
+    align-self: center;
+    color: grey;
+}

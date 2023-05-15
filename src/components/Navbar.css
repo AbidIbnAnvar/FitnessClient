@@ -223,7 +223,7 @@ i{
     height:200vh;
     z-index: 20000;
     list-style: none;
-    background-color: rgba(255, 0, 0, 0.9);
+    background-color: rgb(255, 0, 0);
     width: 100%;
   }
 
@@ -264,8 +264,7 @@ i{
   .navbar a.active::after{
     display: none;
   }
-  .menu-dropdowns{}
-  } 
+  
   
   .dropdown-signin{
     margin-top: 20px;
@@ -277,4 +276,4 @@ i{
     border: 2px solid white;
     color: red;
   }
-  
+}

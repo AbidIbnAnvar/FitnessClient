@@ -1,0 +1,105 @@
+.user-fitness{
+    position: absolute;
+    top:0px;
+    left: 0px;
+    right:0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+  } */
+
+.workout-name{
+    margin-top:80px;
+}
+
+.workout-name,.workout-reps,.workout-calories,.workout-duration{
+    margin-bottom: 20px;
+    margin-left: 0px;
+    align-self: flex-start ;
+    width: 100%;
+}
+
+.workout-name label,.workout-reps label,.workout-calories label,.workout-duration label{
+    margin-left: 50px;
+}
+
+
+.workout-main button{
+    margin-inline: 10px;
+}
+.workout-main label{
+    margin-left: 0px;
+    font-size: 20px;
+    font-family: 'Poppins';
+}
+.workout-main input[type=text],.workout-main input[type=number]{
+    font-size: 16px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: rgb(45, 45, 45);
+    border: 2px rgb(0, 0, 0) solid;
+}
+
+.workout-name input[type=text] {
+    margin-left: 10px;
+    
+}
+.workout-reps input[type=number]{
+    margin-left:10px;
+}
+ .workout-calories input[type=number],.workout-duration input[type=number]{
+    margin-left:10px;
+} 
+
+.workout-main form{
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+}
+.track-workout{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.track-button,.workout-cancel-button{
+    width:300px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-block: 10px;
+}
+
+.workout-cancel-button{
+    background-color: red;
+}
+
+.track-workout-button{
+    width:300px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-top:75px;
+    padding:15px 30px;
+    font-size: 20px;
+    border-radius: 10px;
+
+}
+.track-workout-button i{
+    margin-right: 10px;
+}
+
+.track-workout-buttons{
+    display: flex;
+    flex-direction: column;
+}
+

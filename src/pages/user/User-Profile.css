@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@400;500;700&family=Alegreya:wght@400;500;600;700&family=Poppins&family=Work+Sans:wght@400;500;600;700&display=swap');
+
+.user-profile-details{
+    background-color: rgb(26, 26, 26);
+    padding:40px 50px;
+    border-radius: 20px;
+    width: 400px;
+}
+
+
+.user-details-form{
+    display: flex;
+    flex-direction: column;
+}
+.user-details-form input[type=text]{
+    width: 80%;
+    align-self: center;
+    padding: 15px;
+    margin: 1px 70px 12px 70px;
+    border: none;
+    background: rgb(53, 53, 53);
+    border-radius: 10px;
+}
+
+.user-details-form label{
+    margin: 10px 10px 1px 10px;
+    font-size: 20px;
+    font-family: 'Work Sans';
+}
+.user-details-form h2{
+    margin: 1px 0px 10px 0px;
+    font-family: 'Poppins';
+    font-weight: 100;
+}
+
+.left-arrow{
+    float: left;
+    margin-left: -130px;
+    margin-top:10px
+}
+
+.fa-arrow-left{
+    color: white;
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 32px;
+    -webkit-transform:scale(2.0);
+    transform:scale(2.0);
+}
+
+.user-details{
+    font-family: 'Alegreya Sans SC';
+}
+
+.edit-button{
+    background-color: green;
+    opacity: 0.8;
+    margin-top: 20px;
+}
+.edit-button:hover{
+    opacity: 1;
+}
+
+.cancel-button{
+    background-color: red;
+    opacity: 0.8;
+    margin-left: 20px;
+    margin-top: 20px;
+}
+
+.cancel-button:hover{
+    opacity: 1;
+}
+
+.user-details-form input[type=text]::placeholder{
+    font-family: 'Poppins';
+}
