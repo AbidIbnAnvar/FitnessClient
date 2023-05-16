@@ -22,33 +22,6 @@ function UserHome() {
         withCredentials: true // Include cookies in the request
       })
       setUsername(response.data.username)
-
-
-      // .then(res =>{
-      //   const username = getUsernameFromToken(res.data.access_token);
-      //   console.log(`Username: ${username}`);
-      // })
-      // .catch(error => console.error(error));
-
-    //    const data= await fetch("http://localhost:8080/user/get",{
-    //      method:"GET",
-    //      headers:{
-    //        Accept: "application/json",
-    //        "Content-Type": "application/json",
-    //       //  'Cookie': 'access_token=' + encodeURIComponent(getCookie('access_token'))
-    //       // Authorization: `Bearer ${auth.token}`
-    //      }
-    //    })
-    //    .then(res =>{
-    //      return res.json()
-    //    })
-    //    .then(data => {
-    //      if (data.error) {
-    //        console.log("ERROR")
-    //      } else {
-    //        console.log(data)
-    //      }
-    //    })
      }
      fetchData() 
    },[])
@@ -67,25 +40,29 @@ function UserHome() {
     return decodedToken.username;
   }
 
-  const HeaderMemo = useMemo(()=>{
-    return <UserHeader /> 
-},[])
-
- 
+  const location=useLocation()
+  const {setUserInfo,userInfo} = useContext(UserContext)
+  function logout(){
+    fetch('http://localhost:8080/logout',{
+      credentials:'include',
+      method:'POST'
+    })
+    setUserInfo(null)
+  }
+  
 
   return (
     <div className='user-homepage'>
-      {HeaderMemo}
-      <div className="main-user">
-        <div className="navigation-user">
+      <div className="header-user">
+        <UserHeader />
+      </div>
+      <div className="navigation-user">
           <ul>
             <li><Link to="/user/home" className='nav-active'>Dashboard</Link></li>
             <li><Link to="/user/fitness-videos">Workout Tracker</Link></li>
             <li><Link to="/user/forum" className=''>Forum</Link></li>
           </ul>
-
         </div>
-      </div>
     </div>
   )
 }

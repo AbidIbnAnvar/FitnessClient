@@ -41,26 +41,4 @@ function UserHeader() {
 
 export default UserHeader
 
-
-  
-//     return (
-//       <div className='user-homepage'>
-        
-//         <div className="main-user">
-//           <div className="navigation-user">
-//             <ul>
-//             {NavItems.map((item)=>{
-//                           return(
-//                               <li>
-//                                   <NavLink activeClassName="user-nav-active" to={item.url} className={item.cName}> {item.title}</NavLink>
-//                               </li>
-//                           )
-//                       })}
-//             </ul>
-  
-//           </div>
-//         </div>
-//       </div>
-//     )
-//   }
  

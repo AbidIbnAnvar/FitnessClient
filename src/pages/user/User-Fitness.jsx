@@ -10,10 +10,8 @@ function UserFitness() {
   const[trackWorkout,setTrackWorkout]= useState(false)
   const[trackDuration,setTrackDuration]= useState(false)
   const[username,setUsername]=useState(null)
-  const[workoutName,setWorkoutName] =useState(null)
-  const[workoutReps,setWorkoutReps]=useState(null)
-  const[workoutDuration,setWorkoutDuration]= useState(null)
-  const[workoutCalories,setWorkoutCalories]=useState(null)
+  const[workoutData,setWorkoutData]=useState()
+  
   useEffect(()=>{
     const fetchUsername= async ()=> {
       const response= await axios.get('http://localhost:8080/user/get', {
@@ -21,17 +19,19 @@ function UserFitness() {
       })
       setUsername(response.data.username)
     }
+    const fetchWorkoutData = async()=>{
+      const workout_response= await axios.get('http://localhost:8080/user/get-workout', {
+        withCredentials: true,
+        params:{
+          username:username
+        }
+      }).then(res=>{
+      setWorkoutData(res.data)})
+    }
     fetchUsername()
+    fetchWorkoutData()
   },[])
 
-  async function submitWorkout(){
-    const response= await fetch("http://localhost:8080/user/post-details",{
-       method:'POST',
-       body: JSON.stringify({username,workoutName,workoutReps,workoutDuration,workoutCalories}),
-       headers: {'Content-type':'application/json'},
-       credentials: 'include',
-     })
-  }
 
   const HeaderMemo = useMemo(()=>{
     return <UserHeader /> 
@@ -49,11 +49,28 @@ function UserFitness() {
     const[workoutReps,setWorkoutReps]=useState(null)
     const[workoutDuration,setWorkoutDuration]= useState(null)
     const[workoutCalories,setWorkoutCalories]=useState(null)
-    
-    
-    const changeTrackDuration =()=>{
-      setTrackDuration(!trackDuration)
+
+    async function submitWorkout(){
+      const response= await fetch("http://localhost:8080/user/add-workout",{
+         method:'POST',
+         body: JSON.stringify({username,workoutName,workoutReps,workoutDuration,workoutCalories}),
+         headers: {'Content-type':'application/json'},
+         credentials: 'include',
+       })
+       if (response.status === 200){
+        alert("Workout added")
+      }else{
+        alert('Unable to add workout')
+      }
+      const workout_response= await axios.get('http://localhost:8080/user/get-workout', {
+        withCredentials: true,
+        params:{
+          username:username
+        }
+      }).then(res=>{
+      setWorkoutData(res.data)})
     }
+
     return(
       (trackDuration)?<div className='track-workout'>
       <div className="workout-name"><label htmlFor="workout-name">Workout Name</label><input type='text' name='workout-name' onChange={(e)=>{setWorkoutName(e.target.value)}} /></div>
@@ -92,6 +109,11 @@ function UserFitness() {
           </button>
           }
         </form>
+        <div className='workout-data'>
+        {(workoutData)?
+       workoutData.map((workout,index)=><p><div className="post-no">{index+1}</div><div>{workout.workout_name}</div><div>{(workout.workout_reps)?<p>{workout.workout_reps} reps</p>:<p>{workout.workout_duration} s</p> }</div><div>{workout.workout_calories} cal</div></p>)
+       :<p></p>}
+        </div>
       </div>
     </div>
   )
