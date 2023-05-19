@@ -29,25 +29,6 @@ function Signup() {
       alert('registration failed')
     }
     
-
-
-    //   await axios.post("http://localhost:3000/signup", {username,email,password})
-    //   .then(res=>{
-    //     if(res.data=="exist"){
-    //       alert("User has already logged")
-    //     }else if(res.data=="does not exist"){
-    //       history("/user/home",{state:{id:username}})
-    //     }
-    //   })
-    //   .catch(e=>{
-    //     alert("Wrong details")
-    //     console.log(e)
-    // })
-
-    // } catch (e) {
-    //   console.log(e);
-      
-    // }
   }
   
   return (

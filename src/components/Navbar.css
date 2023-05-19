@@ -173,7 +173,23 @@ i{
     transition: 0.2s ease-in-out;
   }
   
-  
+
+
+  .logo-name{
+    font-size: 50px;
+    color: white;
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+  .logo-name:hover{
+    color: white;
+    filter: drop-shadow(0 0 0.5em #ff0000);
+    -webkit-transform: translateY(0px);
+    -ms-transform: translateY(0px);
+    transform: translateY(0px);
+    
+  }
   
   
   .menu-container .menu-button span{
