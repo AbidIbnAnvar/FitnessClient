@@ -12,7 +12,8 @@
     margin-top:75px;
     padding:15px 30px;
     font-size: 20px;
-    border-radius: 10px;
+    border-radius: 32px;
+    border: 2px solid white;
 }
 
 .create-button i{
@@ -41,8 +42,9 @@
 
 .create-post textarea{
     background-color: rgb(21, 21, 21);
-    border-radius: 20px;
+    border-radius: 24px;
     padding: 20px;
+    padding-inline: 40px;
     font-family: 'Poppins';
     font-size: 16px;
 }
@@ -52,37 +54,71 @@
     width: 175px;
     background-color: darkgreen;
     font-family: 'Poppins';
+    border-radius: 32px;
+    opacity: 0.8;
+    transition: all 0.3s;
     
+}
+.post-button:hover{
+    opacity: 1;
+    border-color: transparent;
 }
 .cancel-post-button{
     margin-left: 20px;
     width: 175px;
     background-color: red;
     font-family: 'Poppins';
+    border-radius: 32px;
+    opacity: 0.8;
+    transition: all 0.3s;
+}
+.cancel-post-button:hover{
+    opacity: 1;
+    border-color: transparent;
 }
 
 .forum-main .forum-data p {
     display: flex;
     flex-direction: row;
-    margin-top: 40px;
+    margin-top: 50px;
     margin-left: 50%;
     transform: translateX(-50%);
     font-family: 'Poppins';
     font-size: 20px;
+    min-height:60px;
+    max-height: -moz-fit-content; 
+    max-height: fit-content;
     padding: 20px 40px;
     background-color: rgb(19, 19, 19);
-    border-radius: 10px;
+    border-radius: 32px;
     width: 70%;
+    align-items: center;
+    
 }
 .forum-main .forum-data p div{
     margin-left: 10px;
     margin-right: 10px;
 }
 
-.post-no{
-    border-right: 3px solid red;
-    padding-inline:20px;
+.forum-data p button{
+    display: none;
     border-radius: 20px;
+    margin-left: auto;
+    background-color: rgb(255, 47, 47);
+}
+
+
+.forum-data p:hover button{
+    display: inline;
+    transition: 0.3s all ease-in;
+}
+
+
+
+.post-no{
+    border-right: 3px solid rgb(255, 37, 37);
+    margin-right: 20px;
+    padding-inline:10px;
     height: 30px;
 }
 

@@ -10,6 +10,11 @@
     --blue : rgb(0, 255, 242);
 }
 
+.home-header-user{
+    margin-left: 0vw;
+}
+
+
 .user-homepage{
     position: absolute;
     top:0px;
@@ -18,57 +23,27 @@
     margin-left: auto;
     margin-right: auto;
 }
-.user-right{
-    margin-left: auto;
-    margin-right: 20px;
-}
-.log-out{
-    border:2px solid white;
-    padding:10px 30px;
-    color: white;
-    border-radius: 10px;    
-    height:auto;
-    margin-left: auto;
-    margin-right: 20px;
-    -webkit-transform:scale(2.0);
-    transform:scale(2.0) ;
-}
-
-.log-out:hover{
-    border: 2px solid transparent;
-    color: var(--blue);
-}
-
-.user-profile{
-     margin-right: 60px;
-     text-decoration: none;
-}
-
-
-
-.header-user{
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
+.navigation-user{
     align-items: center;
-    width:90vw;
+    margin-left: -40px;
+    
 }
 
 .navigation-user ul{
-    margin-top: 20px;
+    margin-top: 30px;
     list-style: none;
     display: flex;
     flex-direction: row;
     position: relative;
     align-content: center;
     justify-content: center;
-    gap: 20%;
+    gap: 5%;
 
 }
 
 .navigation-user a{
-   background: linear-gradient(45deg, rgb(28, 28, 28),black);
-   border-radius: 16px;
+   background-color: rgb(23, 23, 23);
+   border-radius: 32px;
    width: auto;
    font-family: 'Poppins';
    padding: 16px 40px;
@@ -84,3 +59,43 @@
 .navigation-user .nav-active{
     background: linear-gradient(45deg,red,maroon);
 }
+
+.graph{
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: 40px;
+    width: 80vw;
+    font-family: 'Poppins';
+    background-color: rgb(20, 20, 20);
+    padding-block: 2px;
+    border-radius: 20px;
+}
+
+.line-graph{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80vw;
+}
+
+ @media screen and (875px<width<1200px) {
+    .graph{
+        max-width: 80vw;
+    }
+    .line-graph{
+        width: 75%;
+    }
+    
+} 
+@media screen and (width<875px) {
+    .graph{
+        max-width: 80vw;
+    }
+    .line-graph{
+        width: 75vw;
+    }
+    .navigation-user ul{
+        flex-direction: column;
+        gap:50px
+    }
+}
+

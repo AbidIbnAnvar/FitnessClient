@@ -73,6 +73,7 @@
         display: none;
     }
     .about-textblock{
+        
         background-image:none;
         top: 900px;
         margin-bottom: 200px;
@@ -87,6 +88,22 @@
     .about-textblock{
         background-image:none;
         top: 1100px;
+        margin-bottom: 200px;
+    }
+}
+
+@media screen and (width<600px) {
+    .about-textblock{
+        background-image:none;
+        top: 1300px;
+        margin-bottom: 200px;
+    }
+}
+
+@media screen and (width<500px) {
+    .about-textblock{
+        background-image:none;
+        top: 1500px;
         margin-bottom: 200px;
     }
 }

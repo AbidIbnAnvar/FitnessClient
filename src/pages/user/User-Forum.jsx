@@ -10,7 +10,6 @@ function UserForum() {
   const [forumData,setForumData]=useState();
   const[username,setUsername]=useState(null)
   const [message,setMessage] =useState(null);
-  // const [no,setNo]= useState(null)
   var no;
   useEffect(()=>{
     const fetchData= async ()=> {
@@ -20,7 +19,7 @@ function UserForum() {
     }
     const fetchUsername= async ()=> {
       const response= await axios.get('http://localhost:8080/user/get', {
-        withCredentials: true // Include cookies in the request
+        withCredentials: true 
       })
       setUsername(response.data.username)
       
@@ -29,12 +28,50 @@ function UserForum() {
     fetchUsername()
   },[])
 
+  async function deleteData(post){
+      const no =post.no
+      const response = await fetch("http://localhost:8080/user/delete-post",{
+        method:'DELETE',
+        body: JSON.stringify({no}),
+        headers: {'Content-type':'application/json'},
+        credentials: 'include',
+      })
+      if (response.status === 200){
+        alert("Deleted")
+      }else{
+        alert('Unable to delete')
+      }
+      const post_response= await axios.get('http://localhost:8080/user/forum-details', {withCredentials: true}).then(res=>{
+      setForumData(res.data)
+     })
+   }
+function formatDate(date) {
+  const currentDate = new Date(date);
+  const options = { day: 'numeric', month: 'long', year: 'numeric' };
+  const formattedDate = currentDate.toLocaleDateString('en-US', options);
+  const day = currentDate.getDate();
+  let suffix = 'th';
+
+  if (day === 1 || day === 21 || day === 31) {
+    suffix = 'st';
+  } else if (day === 2 || day === 22) {
+    suffix = 'nd';
+  } else if (day === 3 || day === 23) {
+    suffix = 'rd';
+  }
+
+  return formattedDate.replace(/\d+/, `${day}${suffix}`);
+}
+
+
   async function post(){
+    const currentDate = Date.now();
+    const date = formatDate(currentDate);
     no= forumData.length +1
 
     const response= await fetch("http://localhost:8080/user/post-details",{
        method:'POST',
-       body: JSON.stringify({no,username,message}),
+       body: JSON.stringify({no,username,message,date}),
        headers: {'Content-type':'application/json'},
        credentials: 'include',
      })
@@ -70,7 +107,7 @@ function UserForum() {
       <div className="navigation-user">
           <ul>
             <li><Link to="/user/home" className=''>Dashboard</Link></li>
-            <li><Link to="/user/fitness-videos">Workout Tracker</Link></li>
+            <li><Link to="/user/workout-tracker">Workout Tracker</Link></li>
             <li><Link to="/user/forum" className='nav-active'>Forum</Link></li>
           </ul>
 
@@ -93,7 +130,7 @@ function UserForum() {
       </button>}
       <div className='forum-data'>
        {(forumData)?
-       forumData.map((post)=><p><div className="post-no">{post.no}</div><div>{post.message}</div><div className='post-username'>Posted by {post.username}</div></p>)
+       forumData.map((post,index)=><p><div className="post-no">{index+1}</div><div>{post.message}</div><div className='post-username'>Posted by {post.username} on {post.date}</div><button className='delete-data' onClick={(e)=>{e.preventDefault();deleteData(post);}}><i className="fa-solid fa-trash"></i></button></p>)
        :<p></p>}
        </div>
        </form>

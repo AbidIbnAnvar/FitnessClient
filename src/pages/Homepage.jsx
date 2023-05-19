@@ -20,7 +20,7 @@ function Home() {
             <div className="textblock">
                 <h1>ARE YOU READY?</h1> 
                 <p>You are capable of so much more than you think. Believe in yourself and push yourself to reach your full potential through exercise.Don't let excuses hold you back. You owe it to yourself to prioritize your health and well-being. Take the first step towards a healthier you by starting your workout today.</p>
-                <button className="join-now"><Link to='/pricing'><span>Join Now </span></Link></button>
+                <button className="join-now"><Link to='/pricing'><span>JOIN NOW </span></Link></button>
             </div>
         </div>
     </div>

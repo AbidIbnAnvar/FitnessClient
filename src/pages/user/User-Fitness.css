@@ -1,3 +1,7 @@
+body{
+    overflow-x: hidden;
+}
+
 .user-fitness{
     position: absolute;
     top:0px;
@@ -72,10 +76,11 @@ input[type=number] {
 }
 
 .track-button,.workout-cancel-button{
+
     width:300px;
     position: relative;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(-53%);
     margin-block: 10px;
 }
 
@@ -83,18 +88,26 @@ input[type=number] {
     background-color: red;
 }
 
+.workout-data{
+    position: absolute;
+    margin-left: 50%;
+    transform: translateX(-50%);
+}
+
 .track-workout-button{
     width:300px;
     position: relative;
     left: 50%;
-    transform: translateX(-50%);
+    border: 2px solid white;
+    transform: translateX(-53%);
     margin-top:75px;
     padding:15px 30px;
     font-size: 20px;
-    border-radius: 10px;
+    border-radius: 32px;
+    
 
 }
-.track-workout-button i{
+.track-workout-button i,.display-workouts i,.hide-workouts i{
     margin-right: 10px;
 }
 
@@ -103,3 +116,55 @@ input[type=number] {
     flex-direction: column;
 }
 
+.display-workouts,.hide-workouts{
+    align-self: center;
+    margin-top:25px;
+    left: auto;
+    padding:15px 30px;
+    font-size: 20px;
+    border-radius: 32px;
+    border: 2px solid white;
+}
+
+
+
+.workout-data p{
+    display: flex;
+    flex-direction: row;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    align-items: center;
+    align-self: center;
+    font-family: 'Poppins';
+    font-size: 20px;
+    height:50px;
+    padding: 20px 40px;
+    background-color: rgb(19, 19, 19);
+    border-radius: 32px;
+    width: 70vw;
+    align-items: center;
+}
+
+.workout-data p div{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.workout-data p button{
+    display: none;
+    border-radius: 20px;
+    margin-left: auto;
+    background-color: rgb(255, 47, 47);
+    scale: 1;
+    
+}
+
+.workout-data p:hover button{
+    display: inline;
+    transition: 0.3s all ease-in;
+}
+
+.fa-trash{
+    scale: 1;
+}

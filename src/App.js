@@ -1,33 +1,5 @@
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
-
 import { useState, useEffect} from 'react'
 import './App.css'
-import Cookies from 'universal-cookie'
-import jwt from "jwt-decode"
 import { Routes,Route } from 'react-router-dom'
 import Home from './pages/Homepage.jsx'
 import Service from './pages/Service'
@@ -54,11 +26,10 @@ function App() {
     });
   }, []);
 
-  // This function will scroll the window to the top 
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth' // for smoothly scrolling
+      behavior: 'smooth' 
     });
   };
 
@@ -76,7 +47,7 @@ function App() {
         <Route path='/signup' element={<Signup />} />
         <Route path='/user/home' element={<UserHome />} />
         <Route path='/user/profile' element={<UserProfile />} />
-        <Route path='/user/fitness-videos' element={<UserFitness />} />
+        <Route path='/user/workout-tracker' element={<UserFitness />} />
         <Route path='/user/forum' element={<UserForum/>} />
       </Routes>
       

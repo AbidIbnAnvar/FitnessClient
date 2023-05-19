@@ -1,16 +1,9 @@
 export const MenuItems =[
     {
-        title: "Home",
-        splitLocation:"",
-        url: '/',
-        cName: "nav-links nav-home",
-        icon: "fa-solid fa-house"
-    },
-    {
         title:"Pricing",
         splitLocation:"pricing",
         url:'/pricing',
-        cName:"nav-links nav-rest",
+        cName:"nav-links nav-pricing",
         icon:"fa-solid fa-tag"
     },
     {

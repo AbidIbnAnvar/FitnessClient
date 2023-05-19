@@ -14,16 +14,6 @@ export const NavItems =[
         title: "Statistics",
         url: '/user/statistics',
         cName: "statistics"
-    } //,
-    // {
-    //     title: "Diet",
-    //     url: '/user/diet',
-    //     cName: "diet"
-    // },
-    // {
-    //     title: "Forum",
-    //     url: '/user/forum',
-    //     cName: "forum"
-    // }
+    }
     
 ]

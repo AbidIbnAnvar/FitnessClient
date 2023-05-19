@@ -1,11 +1,8 @@
-import React, { useContext, useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react'
 import './Login.css'
-import axios from "axios"
 import { useMemo } from 'react'
-import { Navigate } from 'react-router-dom'
 import { Link, useNavigate } from 'react-router-dom'
 import Navbar from '../components/Navbar'
-import { UserContext } from '../components/UserContext'
 
 function Login() {
   const navMemo = useMemo(()=>{
@@ -16,7 +13,6 @@ function Login() {
   const [username,setUsername]=useState('');
   const [password,setPassword]=useState('');
   const [redirect,setRedirect]=useState(false);
-  const {setUserInfo} =useContext(UserContext)
 
   useEffect(() => {
     if (redirect) {
@@ -33,25 +29,13 @@ function Login() {
         headers: {'Content-type':'application/json'},
         credentials: 'include',
       })
-    // if (response.ok){
-    //   setRediret(true);
-    // } else{
-    //   alert('wrong credentials')
-    // }
-    
-    // if (redirect) {
-    //   return <Navigate to={'http://localhost:3000/user/home'} /> 
-    // }
 
      if (response.status === 200){
       alert('Login Successfull')
       setRedirect(true)
-      // response.json().then(userInfo =>{
-      //   setUserInfo(userInfo)
-      //   setRediret(true)
-      // })
+      
      }else{
-       alert('login failed')
+       alert('Login Failed')
      }
      
       
@@ -61,35 +45,11 @@ function Login() {
   
 }
 
-  //   try {
-  //     await axios.post("http://localhost:3000/login", {
-  //       email,password
-  //     })
-  //     .then(res=>{
-  //       if(res.data=="exist"){
-  //           history("/user/home",{state:{id:email}})
-  //       }else if(res.data=="does not exist"){
-  //         alert("User has not signed up")
-  //       }
-  //     })
-  //     .catch(e=>{
-  //       alert("Wrong details")
-  //       console.log(e)
-  //   })
-  //   } catch (e) {
-  //     console.log(e);
-      
-  //   }
-  // }
-
   return (
     <div>
       {navMemo}
         <div className="login-overlay" id="login-in">
             <form action="POST" className="form-container" onSubmit={submit}>
-                {/* <button className="close_button" onclick="close_signin()"><span className="material-symbols-outlined">
-                    close
-                </span> </button>  */}
               <h1>Login</h1>
           
               <label htmlFor="username"><b>Username</b></label>

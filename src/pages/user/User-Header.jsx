@@ -16,7 +16,7 @@ function UserHeader() {
      useEffect(()=>{
        const fetchData= async ()=> {
         const response= await axios.get('http://localhost:8080/user/get', {
-          withCredentials: true // Include cookies in the request
+          withCredentials: true
         })
         setUsername(response.data.username)
        }
@@ -31,7 +31,7 @@ function UserHeader() {
             <h1>Welcome <div className='header-username'>{username}</div></h1> 
             <div className="user-right">
                 <Link to='/user/profile' className='user-profile'><i className="fa-solid fa-user"></i></Link>
-                <Link to='/login' className="log-out">Log Out           <i className="fa-solid fa-arrow-right-from-bracket"></i></Link>
+                <Link to='/login' className="log-out"><div className="log-out-text">Log Out</div>           <i className="fa-solid fa-arrow-right-from-bracket"></i></Link>
             </div>
             
         </div>

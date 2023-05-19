@@ -13,17 +13,6 @@ function Signup() {
   const navMemo = useMemo(()=>{
     return <Navbar /> 
   },[])
-  // const [username,setUsername] = useState('');
-  // const [email,setEmail] = useState('');
-  // const [password,setPassword] = useState('');
-  // async function register(ev){
-  //   ev.preventDefault();
-  //   await fetch('http://localhost:3000/signup', {
-  //     method: 'POST',
-  //     body: JSON.stringify({username,email,password}),
-  //     headers: {'Content-Type':'application/json'},
-  //   })
-  // }
   const history=useNavigate();
   const [username,setUsername] = useState('');
   const [email,setEmail]=useState('');
@@ -33,12 +22,6 @@ function Signup() {
     e.preventDefault();
 
     const response = await axios.post("http://localhost:8080/signup",{username,email, password})
-
-    // const response= await fetch("http://localhost:8080/signup",{
-    //     method:'POST',
-    //     body: JSON.stringify({username,email,password}),
-    //     headers: {'Content-type':'application/json'}
-    //   })
     if (response.status === 200){
       alert('Registeration Successfull')
       history("/login")

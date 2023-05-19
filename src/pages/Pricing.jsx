@@ -21,10 +21,9 @@ function Pricing() {
                     <div className="price-container"><h6><div className="price">$19</div>/MONTH</h6></div>
                     <div className="box-contents">
                       <ul>
-                        <li>Point 1</li>
-                        <li className='not-available'>Point 2</li>
-                        <li className='not-available'>Point 3</li>
-                        <li className="not-available">Point 3</li>
+                        <li>Workout Tracker</li>
+                        <li className='not-available'>Community Forum</li>
+                        <li className='not-available'>Personal Coaching</li>
                       </ul>
                     </div>
                 </div>
@@ -33,10 +32,9 @@ function Pricing() {
                     <div className="price-container"><h6><div className="price">$29</div>/MONTH</h6></div>
                     <div className="box-contents">
                       <ul>
-                        <li>Point 1</li>
-                        <li>Point 2</li>
-                        <li>Point 3</li>
-                        <li className="not-available">Point 3</li>
+                        <li>Workout Tracker</li>
+                        <li>Community Forum</li>
+                        <li className='not-available'>Personal Coaching</li>
                       </ul>
                     </div>
                     <div className="best-value">BEST VALUE</div>
@@ -47,10 +45,9 @@ function Pricing() {
                     <div className="price-container"><h6><div className="price">$49</div>/MONTH</h6></div>
                     <div className="box-contents">
                       <ul>
-                        <li>Point 1</li>
-                        <li>Point 2</li>
-                        <li>Point 3</li>
-                        <li>Point 3</li>
+                        <li>Workout Tracker</li>
+                        <li>Community Forum</li>
+                        <li>Personal Coaching</li>
                       </ul>
                     </div>
                     

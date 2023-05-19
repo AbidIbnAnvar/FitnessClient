@@ -7,6 +7,7 @@ import {NavLink} from 'react-router-dom'
 import {MenuDropdownItems} from './MenuDropdownItems'
 
 
+
 class Navbar extends Component{
     state = { clicked: false}
     handleClick =() =>{
@@ -30,10 +31,13 @@ class Navbar extends Component{
             <nav className='topnav'>
                 <div className="navbar">
                     <div className="links">
+                    <ul><li className='logo-container'><Link to='/'><img className='logo' src="/Move_logo_white_Runner.svg" alt="Logo" /></Link></li></ul>
+ 
                     {MenuItems.map((item, index)=>{
                         return(
                             <li key={index}>
                                 <NavLink activeClassName="active" to={item.url} className={item.cName}> {item.title}</ NavLink>
+                                
                             </li>
                         )
                     })}

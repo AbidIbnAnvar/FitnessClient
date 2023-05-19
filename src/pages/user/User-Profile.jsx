@@ -16,7 +16,7 @@ function UserProfile() {
    useEffect(()=>{
      const fetchData= async ()=> {
       const response= await axios.get('http://localhost:8080/user/get', {
-        withCredentials: true // Include cookies in the request
+        withCredentials: true
       })
       setUsername(response.data.username)
       setEmail(response.data.email)
@@ -82,7 +82,7 @@ function UserProfile() {
       <div className="input-profile">
         <form className='user-details-form'>
         <label htmlFor="username">Username:</label>
-        {editMode?<input type="text" name="username" onChange={(e)=>{setUsername(e.target.value)}} placeholder={username} />:<h2>{username}</h2>}
+        <h2>{username}</h2>
         <label htmlFor="email">Email:</label>
         {editMode?<input type="text" name="email" onChange={(e)=>{setEmail(e.target.value)}} placeholder={email} />:<h2>{email}</h2>}
         <label htmlFor="weight">Weight (In kg):</label>
