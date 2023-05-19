@@ -23,7 +23,6 @@
     display: flex;
     align-items: center;
     justify-content: center ;
-    /* background-color: #300000; */
     background-color: black;
     height: 100px;
     top: 0;
@@ -34,8 +33,7 @@
     vertical-align: bottom;
     position:fixed;
     z-index: 10000;
-    scale: 1.0;
-    /* border-radius: 20px; */
+    transform:scale(1);
     opacity:90%;
   
   }
@@ -55,8 +53,6 @@
   .nav-pricing{
     margin-left: -50px;
   }
-  
-  
 
 i{
   margin-right: 1 0px;
@@ -158,7 +154,7 @@ i{
   }
 
   .menu-container .menu-button{
-    scale: 2;
+    transform:scale(2);
     background-color: transparent;
     padding: 5px 10px 5px 10px;
     margin:17px;
@@ -185,19 +181,10 @@ i{
     -ms-transform: translateY(0px);
     transform: translateY(0px);
   }
-/*
-  .logo-name:hover{
-    color: white;
-    filter: drop-shadow(0 0 0.5em #ff0000);
-    -webkit-transform: translateY(0px);
-    -ms-transform: translateY(0px);
-    transform: translateY(0px);
-    
-  }
-   */
+
   
   .menu-container .menu-button span{
-    scale: 1.8;
+    transform: scale(1.8);
     padding: 16px;
     
   }
@@ -247,12 +234,12 @@ i{
     }
     .navbar li:not(:first-child) { display: none}
     .navbar a:first-child{
-      scale:1.0;
+      transform: scale(1);
       margin-left: 10vw;
       margin-right: auto;
     }
   .navbar a:first-child:hover{
-    scale: 1;
+    transform: scale(1);
   }
   .navbar a.active::after{
     display: none;
