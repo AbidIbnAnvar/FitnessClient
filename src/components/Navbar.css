@@ -173,6 +173,9 @@ i{
     transition: 0.2s ease-in-out;
   }
   
+  .logo-container:hover{
+    filter: drop-shadow(0 0 2em #ff0000);
+  }
 
 
   .logo-name{
@@ -182,6 +185,7 @@ i{
     -ms-transform: translateY(0px);
     transform: translateY(0px);
   }
+/*
   .logo-name:hover{
     color: white;
     filter: drop-shadow(0 0 0.5em #ff0000);
@@ -190,7 +194,7 @@ i{
     transform: translateY(0px);
     
   }
-  
+   */
   
   .menu-container .menu-button span{
     scale: 1.8;
