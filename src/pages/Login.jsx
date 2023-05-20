@@ -23,7 +23,7 @@ function Login() {
   async function submit(e){
     e.preventDefault();
 
-    const response= await fetch("http://localhost:8080/login",{
+    const response= await fetch("http://34.133.77.198/api/login",{
         method:'POST',
         body: JSON.stringify({username,password}),
         headers: {'Content-type':'application/json'},

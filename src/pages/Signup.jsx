@@ -20,8 +20,7 @@ function Signup() {
 
   async function submit(e){
     e.preventDefault();
-
-    const response = await axios.post("http://localhost:8080/signup",{username,email, password})
+    const response = await axios.post("http://34.133.77.198/api/signup",{username,email, password})
     if (response.status === 200){
       alert('Registeration Successfull')
       history("/login")

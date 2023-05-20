@@ -15,7 +15,7 @@ function UserHeader() {
     const [username,setUsername] =useState(null)
      useEffect(()=>{
        const fetchData= async ()=> {
-        const response= await axios.get('http://localhost:8080/user/get', {
+        const response= await axios.get('http://34.133.77.198/api/user/get', {
           withCredentials: true
         })
         setUsername(response.data.username)

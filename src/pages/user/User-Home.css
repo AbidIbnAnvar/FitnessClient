@@ -99,3 +99,67 @@
     }
 }
 
+.doughnut-chart div{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+@keyframes RingProgress {
+    0% {
+        stroke-dasharray: 0 100;
+    }
+  }
+  
+  .ActivityRings {
+    height: 25%;
+    width: 25%;
+    transform: rotate(-90deg);
+    .ring {
+        transform-origin: 50%;
+    }
+    .completed {
+        animation: RingProgress 1s ease-in-out forwards;
+        stroke-linecap: round;
+    }
+  
+    .circle {
+        fill: none;
+    }
+  
+  
+  }
+  
+  
+  
+  .ring1 {
+    .background {
+        stroke: transparentize(#c53f3d, 0.8);
+    }
+    .completed {
+        stroke: #c53f3d;
+    }
+  
+  }
+  
+  .ring2 {
+    .background {
+        stroke: transparentize(#c53f3d, 0.8);
+    }
+    .completed {
+        stroke: #2cce37;
+    }
+  
+    transform: scale(0.75);
+  }
+  
+  .ring3 {
+    .background {
+        stroke: transparentize(#58c5e9, 0.8);
+    }
+    .completed {
+        stroke: #58c5e9;
+    }
+  
+    transform: scale(0.5);
+  }

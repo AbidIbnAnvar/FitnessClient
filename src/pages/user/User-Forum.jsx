@@ -13,12 +13,12 @@ function UserForum() {
   var no;
   useEffect(()=>{
     const fetchData= async ()=> {
-     const response= await axios.get('http://localhost:8080/user/forum-details', {withCredentials: true}).then(res=>{
+     const response= await axios.get('http://34.133.77.198/api/user/forum-details', {withCredentials: true}).then(res=>{
       setForumData(res.data)
      })
     }
     const fetchUsername= async ()=> {
-      const response= await axios.get('http://localhost:8080/user/get', {
+      const response= await axios.get('http://34.133.77.198/api/user/get', {
         withCredentials: true 
       })
       setUsername(response.data.username)
@@ -30,7 +30,7 @@ function UserForum() {
 
   async function deleteData(post){
       const no =post.no
-      const response = await fetch("http://localhost:8080/user/delete-post",{
+      const response = await fetch("http://34.133.77.198/api/user/delete-post",{
         method:'DELETE',
         body: JSON.stringify({no}),
         headers: {'Content-type':'application/json'},
@@ -41,7 +41,7 @@ function UserForum() {
       }else{
         alert('Unable to delete')
       }
-      const post_response= await axios.get('http://localhost:8080/user/forum-details', {withCredentials: true}).then(res=>{
+      const post_response= await axios.get('http://34.133.77.198/api/user/forum-details', {withCredentials: true}).then(res=>{
       setForumData(res.data)
      })
    }
@@ -69,7 +69,7 @@ function formatDate(date) {
     const date = formatDate(currentDate);
     no= forumData.length +1
 
-    const response= await fetch("http://localhost:8080/user/post-details",{
+    const response= await fetch("http://34.133.77.198/api/user/post-details",{
        method:'POST',
        body: JSON.stringify({no,username,message,date}),
        headers: {'Content-type':'application/json'},
@@ -80,7 +80,7 @@ function formatDate(date) {
      }else{
        alert('Unable to post')
      }
-     const post_response= await axios.get('http://localhost:8080/user/forum-details', {withCredentials: true}).then(res=>{
+     const post_response= await axios.get('http://34.133.77.198/api/user/forum-details', {withCredentials: true}).then(res=>{
       setForumData(res.data)
      })
  } 

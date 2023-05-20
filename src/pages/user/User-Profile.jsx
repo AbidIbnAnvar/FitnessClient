@@ -15,7 +15,7 @@ function UserProfile() {
   }
    useEffect(()=>{
      const fetchData= async ()=> {
-      const response= await axios.get('http://localhost:8080/user/get', {
+      const response= await axios.get('http://34.133.77.198/api/user/get', {
         withCredentials: true
       })
       setUsername(response.data.username)
@@ -28,7 +28,7 @@ function UserProfile() {
 
   const handleUpdate = async () => {
     try {
-      const response = await fetch("http://localhost:8080/user/details", {
+      const response = await fetch("http://34.133.77.198/api/user/details", {
         method: "PATCH",
         headers: {
           "Content-Type": "application/json",
@@ -59,7 +59,7 @@ function UserProfile() {
    async function submit(e){
      e.preventDefault();
 
-     const response= await fetch("http://localhost:8080/user/details",{
+     const response= await fetch("http://34.133.77.198/api/user/details",{
         method:'PATCH',
         body: JSON.stringify({username,email,weight,height}),
         headers: {'Content-type':'application/json'},
